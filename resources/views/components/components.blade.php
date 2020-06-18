@@ -1,0 +1,6 @@
+@include('components.contact')
+@include('components.experience')
+@include('components.home')
+@include('components.projects')
+@include('components.utils')
+@include('components.whoami')

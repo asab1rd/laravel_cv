@@ -1,0 +1,106 @@
+@mixin headerDark($bgColor, $textColor, $linkColor, $hoverColor) {
+    header {
+        .header-bg {
+            background-color: transparent;
+        }
+        * {
+            color: $textColor;
+        }
+        .nav-toggle .stick {
+            background-color: $textColor;
+        }
+        .menu {
+            background-color: $bgColor;
+            .menu-main {
+                & .active > a {
+                    color: $linkColor;
+                }
+                & a:hover {
+                    // background-color: $deepPurple;
+                    color: $hoverColor;
+                    text-shadow: none;
+                }
+            }
+            .menu-lang-item {
+                &.active {
+                    color: $linkColor;
+                    text-decoration: none;
+                }
+                &:hover {
+                    // background-color: $deepPurple;
+                    color: $hoverColor;
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+}
+@mixin footer($color) {
+    .social i {
+        color: $white;
+    }
+    i:hover {
+        color: $color;
+    }
+}
+@mixin home {
+    .slide-personal-intro {
+        * {
+            color: $white;
+        }
+        .slide-bg,
+        .header-bg {
+            background-color: $darkModeBlack;
+        }
+
+        .slide-title {
+            color: $white;
+            // background-color: $darkBlue;
+        }
+        .slide-title-sub {
+            color: $purple;
+        }
+        .slide-descr {
+            color: $darkModeWhite;
+        }
+        .text-primary {
+            color: $lightBlue !important;
+        }
+        .carousel-project-personal {
+            .slide-title-sub {
+                color: $white;
+            }
+            .slide-title {
+                color: $purple !important;
+                // background-color: $darkBlue;
+            }
+        }
+    }
+}
+
+@mixin whoami {
+    * {
+        color: $white;
+    }
+    .slide-personal-whoami {
+        .slide-bg {
+            background-color: $secDarkGreen;
+        }
+        .slide-title {
+            color: $secLovedOrange;
+            // background-color: $darkBlue;
+        }
+        .whoami-item-title {
+            color: $secOrange !important;
+        }
+        .slide-title-sub {
+            color: $secTaupe;
+        }
+        // .slide-descr {
+        //     color: $secCleanWhite;
+        // }
+        .text-primary {
+            color: $secBlueGray !important;
+        }
+    }
+}
